@@ -2,6 +2,10 @@
 
 Este repositorio contiene la implementación del modelo matricial de sensores, el análisis de condicionamiento y sensibilidad al ruido, y las pruebas automatizadas con `pytest`.
 
+## Commmit Evaluable
+
+f3e5db2
+
 ## Ubicación de archivos y resultados
 * `modelo.py`: Funciones matemáticas puras, validación de contratos y métricas.
 * `experimento.py`: Orquestación de las simulaciones (`c = 0.2` y `c = 0.99`), diagnóstico matricial y exportación de resultados.
