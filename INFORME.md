@@ -54,6 +54,30 @@ pytest
 
 ---
 
+## 3. Nota — Antonia Cardozo
+
+ * **Predicción inicial:** Antes de ejecutar el experimento, al comparar c=0.2 con c=0.99 esperaba que el error incrementara, debido al ruido que genrarían las dos mediciones al estar tan cerca entre ellas. 
+* **Prueba explicada:** Las pruebas dek archivo  `tests/test_modelo.py`buscan generar un control de calidad automatizado, este verifica y garantiza la exactitud matemática, revisa el manejo de errores y se asegura de la integridad de los datos, compara los valores del programa con los que conocemos. 
+
+La función (´test_identidades_algebraicas´) busca verificar  que los autovalores, QR y SVD, cumplan los teoremas matemáticos para ambos valores de c.
+
+Funciona por medio de @pytest.mark.parametrize  para automatizar la prueba tanto para c=0,2 como para c=0,99.
+
+También comprueba y verifica tres identidades:
+
+1. Que A V = V Λ (los autovectores y autovalores reconstruyen la acción de la matriz).
+
+2. Que Q R = A y que \(Q^T Q = I\) (la matriz Q es  ortogonal).
+
+3. Que \(U \Sigma V^T = A\) (la descomposición en valores singulares reconstruye la matriz original sin presentar errores de transposición)
+
+
+
+* **Decisión de implementación:** se uso la estructura de columnas `(2, 441)` para separar los valores provenientes de las dos señales, así obtendría cada componente en una fila y cada señal independiente en una columna. Esto a su vez permite asegurar la compatibilidad con la fórmula matemática, ecuación b= Ax; por otro lado permite la resolución simultanea de ciclos en una sola llamada; finalmente permite tener una mayor claridad en los ejes estadísticos manteniedno una regla fija en todo el programa Eje 0 representa los dos sensores y Eje 1 recorre las 441 muestras. 
+
+---
+
+
 ## Referencias 
 
 • Documentación oficial de NumPy (Álgebra Lineal): NumPy Developers. (2024). Linear algebra (numpy.linalg) — NumPy v2.1 Manual. numpy.org
