@@ -15,4 +15,3 @@ __pycache__/
 .DS_Store
 
 # Resultados del experimento (opcional, por si quieres que se generen en limpio)
-mapa_errores.png
