@@ -1,0 +1,18 @@
+# Entorno virtual
+venv/
+.venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Archivos del sistema u ocultos de VS Code
+.vscode/
+.DS_Store
+
+# Resultados del experimento (opcional, por si quieres que se generen en limpio)
+mapa_errores.png
