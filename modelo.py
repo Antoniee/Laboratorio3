@@ -23,11 +23,16 @@ def generar_ruido(num_senales: int = 441) -> np.ndarray:
     rng = np.random.default_rng(7)
     return rng.normal(loc=0.0, scale=0.01, size=(2, num_senales))
 
+
+
 def simular_lecturas(A: np.ndarray, x: np.ndarray, ruido: np.ndarray) -> np.ndarray:
-    """Calculo b = A @ x + ruido usando producto matricial y adición vectorizada."""
-    if A.shape != (2, 2) or x.shape != 2 or ruido.shape != x.shape:
+    """Calcula b = A @ x + ruido usando producto matricial y adición vectorizada."""
+    if A.shape != (2, 2) or x.ndim != 2 or x.shape[0] != 2 or ruido.shape != x.shape:
         raise ValueError("Dimensiones incompatibles para simulación.")
+    if not (np.all(np.isfinite(A)) and np.all(np.isfinite(x)) and np.all(np.isfinite(ruido))):
+        raise ValueError("Los arreglos contienen valores no finitos (NaN o Inf).")
     return (A @ x) + ruido
+
 
 def reconstruir_senales(A: np.ndarray, b: np.ndarray) -> np.ndarray:
     """Esta función recupera x_hat resolviendo múltiples columnas simultáneamente con solve."""
