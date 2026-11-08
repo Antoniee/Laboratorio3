@@ -7,6 +7,8 @@
 
 ## 1. Resultados Experimentales
 
+![Tablas obtenidas en la consola de VSC ](Tablas_resultados.png)
+
 ### Tabla 1: Diagnóstico Matricial
 
 |   c  | Autovalores ($\lambda$) | Valores Singulares ($\sigma$) | Condición $\kappa_2$ | Disc. QR | Disc. SVD |
@@ -26,7 +28,7 @@
 ![Mapa de errores de reconstrucción](mapa_errores.png)
 
 pytest 
-### Figura 2: Evidencia de ejecución de pruebas automatizadas (`pytest`)
+### Figura 2: Evidencia de ejecución de pruebas automatizadas (pytest)
 
 ![Pruebas pytest passed](pytest_passed.png)
 
@@ -52,4 +54,9 @@ pytest
 
 ---
 
+## Referencias 
 
+• Documentación oficial de NumPy (Álgebra Lineal): NumPy Developers. (2024). Linear algebra (numpy.linalg) — NumPy v2.1 Manual. numpy.org
+• Documentación oficial de NumPy (Broadcasting): NumPy Developers. (2024). Broadcasting — NumPy v2.1 Manual. numpy.org
+• Documentación oficial de NumPy (Copias y vistas): NumPy Developers. (2024). Copies and views — NumPy v2.1 Manual. numpy.org
+• Texto guía de Álgebra Lineal Numérica (Condicionamiento y SVD): Trefethen, L. N., & Bau III, D. (1997). Numerical Linear Algebra (Lecture 12: Conditioning and Condition Numbers; Lecture 5: Singular Value Decomposition). SIAM.
